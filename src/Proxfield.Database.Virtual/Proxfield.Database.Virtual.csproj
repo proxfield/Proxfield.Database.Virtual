@@ -1,9 +1,36 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
-  </PropertyGroup>
+        <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
+        <Authors>Proxfield</Authors>
+        <PackageIcon>images\company-logo.png</PackageIcon>
+        <PackageIconUrl>https://proxfield.com/public/favicon.png</PackageIconUrl>
+        <PackageId>Proxfield.Database.Virtual</PackageId>
+        <Version>0.0.1</Version>
+        <PackageTags>Proxfield</PackageTags>
+        <Description> Fake database layer to be implemented on PoC and other related tests. Simulates a document database using only the DotNet framework and its capabilities.</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/proxfield/Proxfield.Database.Virtual</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/proxfield/Proxfield.Database.Virtual</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Company>Proxfield</Company>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\docs\images\company-logo.png" Pack="true" Visible="false" PackagePath="images\company-logo.png" />
+        <None Include="..\..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\..\README.md">
+          <Pack>True</Pack>
+          <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
